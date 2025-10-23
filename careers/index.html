@@ -35,62 +35,439 @@
             --m5-accent: #7BC4C4;
         }
 
-        /* Page-specific styles */
-
-        /* Make login link more prominent */
-        .top-bar-link[href="/customer-portal/"] {
-            background: var(--m5-brand);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
-            border: 1px solid var(--m5-brand);
-            transition: all 0.2s ease;
+        /* Widget container height locking */
+        .neodigm-widget-container {
+            height: 4rem;
+            min-height: 4rem;
+            max-height: 4rem;
+            overflow: hidden;
         }
 
-        .top-bar-link[href="/customer-portal/"]:hover {
-            background: var(--m5-brand-dark);
-            border-color: var(--m5-brand-dark);
-            color: white;
+        /* Navigation Styles */
+        body {
+            padding-top: 66px;
         }
 
-        .top-bar-link[href="/customer-portal/"] .material-symbols-outlined {
-            color: white;
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #e0e0e0;
+            z-index: 1000;
         }
 
-        /* Show nav logo on desktop */
-        .main-nav .nav-logo {
-            display: inline-flex;
-            justify-self: center;
+        .nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 32px;
+            display: flex;
+            align-items: center;
+            height: 66px;
         }
 
-        /* Desktop only logo */
-        .nav-logo.desktop-only {
-            display: none;
+        .nav-left {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+            flex: 1;
         }
 
         .nav-logo {
-            display: inline-flex;
+            display: flex;
             align-items: center;
             text-decoration: none;
-            margin-left: -20px;
         }
 
         .nav-logo img {
-            height: 60px;
+            height: 48px;
             width: auto;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 0;
+        }
+
+        .nav-link:hover {
+            color: var(--m5-brand);
+        }
+
+        .nav-link-arrow {
+            font-size: 10px;
+            transition: transform 0.2s;
+        }
+
+        .nav-item:hover .nav-link-arrow {
+            transform: rotate(180deg);
+        }
+
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            padding: 24px;
+            min-width: 240px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(10px);
+            transition: opacity 0.15s, transform 0.15s, visibility 0s 0.15s;
+            margin-top: 4px;
+        }
+
+        .nav-item:hover .nav-dropdown,
+        .nav-dropdown:hover {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            transition-delay: 0s;
+        }
+
+        .dropdown-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+
+        .dropdown-column h4 {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--m5-brand);
+            margin-bottom: 12px;
+            user-select: none;
+            cursor: default;
+        }
+
+        .dropdown-links {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .dropdown-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 6px 0;
+            transition: color 0.2s;
             display: block;
         }
 
-        .nav-menu a {
+        .dropdown-link:hover {
+            color: var(--m5-brand);
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            background: var(--m5-brand);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 500;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--m5-brand);
             white-space: nowrap;
         }
 
-        .nav-spacer {
-            justify-self: end;
-            display: flex;
-            align-items: center;
+        .nav-cta:hover {
+            background: transparent;
+            color: var(--m5-brand);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(52, 152, 219, 0.2);
         }
 
+        .nav-cta .material-symbols-outlined {
+            font-size: 18px;
+        }
+
+        .mobile-menu-button {
+            display: none;
+            background: none;
+            border: none;
+            padding: 8px;
+            cursor: pointer;
+            width: 40px;
+            height: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hamburger {
+            position: relative;
+            width: 20px;
+            height: 14px;
+        }
+
+        .hamburger span {
+            position: absolute;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #333;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger span:nth-child(1) { top: 0; }
+        .hamburger span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+        .hamburger span:nth-child(3) { bottom: 0; }
+
+        .mobile-menu-button.active .hamburger span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+
+        .mobile-menu-button.active .hamburger span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .mobile-menu-button.active .hamburger span:nth-child(3) {
+            transform: rotate(-45deg) translate(5px, -5px);
+        }
+
+        .mobile-menu {
+            position: fixed;
+            top: 66px;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: white;
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+            z-index: 999;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu-content {
+            padding: 24px;
+        }
+
+        .mobile-nav-item {
+            margin-bottom: 24px;
+        }
+
+        .mobile-nav-link {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .mobile-nav-arrow {
+            font-size: 12px;
+            transition: transform 0.2s;
+        }
+
+        .mobile-nav-item.expanded .mobile-nav-arrow {
+            transform: rotate(180deg);
+        }
+
+        .mobile-dropdown {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .mobile-nav-item.expanded .mobile-dropdown {
+            max-height: 500px;
+            margin-top: 12px;
+        }
+
+        .mobile-dropdown-link {
+            color: #666;
+            text-decoration: none;
+            font-size: 14px;
+            padding: 8px 0 8px 16px;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .mobile-dropdown-link:hover {
+            color: #333;
+        }
+
+        .mobile-menu-footer {
+            padding: 24px;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .mobile-cta {
+            background: var(--m5-brand);
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            padding: 12px;
+            text-align: center;
+            border-radius: 8px;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+            display: block;
+        }
+
+        .mobile-cta:hover {
+            background: var(--m5-brand-dark);
+        }
+
+        /* Footer Styles */
+        .footer {
+            background-color: #f5f5f5;
+            border-top: 1px solid #e0e0e0;
+            color: #333;
+            padding: 80px 24px 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 100px;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            flex: 0 0 auto;
+            width: 380px;
+        }
+
+        .footer-sections-wrapper {
+            flex: 0 0 auto;
+            display: flex;
+            gap: 80px;
+        }
+
+        .footer-brand p {
+            color: #666;
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .footer-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--m5-brand);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+
+        .footer-contact:hover {
+            color: var(--m5-brand-dark);
+            transform: translateX(2px);
+        }
+
+        .footer-contact .material-symbols-outlined {
+            font-size: 20px;
+        }
+
+        .footer-section {
+            flex: 0 1 auto;
+        }
+
+        .footer-section h4 {
+            color: var(--m5-brand);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 12px;
+        }
+
+        .footer-section a {
+            color: #666;
+            text-decoration: none;
+            transition: all 0.2s;
+            font-size: 15px;
+        }
+
+        .footer-section a:hover {
+            color: var(--m5-brand);
+            transform: translateX(2px);
+        }
+
+        .footer-bottom {
+            margin-top: 32px;
+            padding: 32px 0;
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .footer-bottom a {
+            color: var(--m5-brand);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover {
+            text-decoration: underline;
+        }
 
         /* Hero Section */
         .hero {
@@ -100,7 +477,7 @@
             align-items: center;
             justify-content: center;
             overflow: hidden;
-            background: linear-gradient(135deg, var(--m5-dark) 0%, var(--m5-night-mid) 100%);
+            background: linear-gradient(135deg, var(--m5-brand) 0%, var(--m5-brand-dark) 100%);
         }
 
         .hero-background {
@@ -109,8 +486,8 @@
             left: -5%;
             width: 110%;
             height: 110%;
-            background: url('/img/machfivetech-code.jpg') center/cover;
-            opacity: 0.1;
+            background: url('/img/mach five marketing hero.png') center/cover;
+            opacity: 0.15;
             will-change: transform;
         }
 
@@ -120,11 +497,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: radial-gradient(
-                ellipse at center,
-                rgba(24, 24, 24, 0.3) 0%,
-                rgba(24, 24, 24, 0.8) 100%
-            );
+            background: rgba(255, 255, 255, 0.92);
         }
 
         .hero-content {
@@ -132,7 +505,7 @@
             z-index: 2;
             max-width: 1000px;
             padding: 0 24px;
-            color: white;
+            color: var(--m5-dark);
         }
 
         .hero-title {
@@ -141,6 +514,7 @@
             line-height: 1.2;
             margin-bottom: 24px;
             font-family: 'Roboto Condensed', sans-serif;
+            color: var(--m5-dark);
         }
 
         .hero-title span {
@@ -150,7 +524,7 @@
 
         .hero-subtitle {
             font-size: clamp(20px, 3vw, 28px);
-            color: rgba(255, 255, 255, 0.9);
+            color: #666;
             margin-bottom: 48px;
             line-height: 1.4;
         }
@@ -782,22 +1156,33 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
-
-            /* Update mobile nav menu styles */
-            .nav-menu a {
-                width: 100%;
-                text-align: center;
-                font-size: 1.125rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 12px;
+            body {
+                padding-top: 66px;
             }
 
-            /* Mobile menu icon styling */
-            .nav-menu a .material-symbols-outlined {
-                font-size: 20px;
-                color: var(--m5-brand);
+            .nav-container {
+                padding: 0 16px;
+                height: 56px;
+            }
+
+            .nav-logo img {
+                height: 40px;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .nav-cta {
+                display: none;
+            }
+
+            .mobile-menu-button {
+                display: flex;
+            }
+
+            .mobile-menu {
+                top: 56px;
             }
 
             .hero-cta {
@@ -876,9 +1261,40 @@
                 gap: 24px;
             }
 
+            .footer {
+                padding: 40px 16px 0;
+            }
+
             .footer-content {
                 flex-direction: column;
                 text-align: center;
+                gap: 32px !important;
+                padding-bottom: 32px;
+            }
+
+            .footer-brand {
+                width: 100% !important;
+                max-width: 100% !important;
+            }
+
+            .footer-sections-wrapper {
+                flex-direction: column;
+                gap: 32px !important;
+                width: 100%;
+            }
+
+            .footer-section {
+                margin: 0 !important;
+                padding: 0 !important;
+            }
+
+            .footer-brand p {
+                font-size: 15px;
+                margin-bottom: 8px;
+            }
+
+            .footer-contact {
+                font-size: 15px;
             }
         }
 
@@ -934,41 +1350,163 @@
             </div>
         </div>
 
-        <nav class="main-nav">
+        <nav class="nav">
             <div class="nav-container">
-                <a href="/" class="nav-logo"><img src="/img/Logo_M5M_Dark_Web.png" alt="Mach Five Marketing" style="height: 60px; width: auto;"></a>
-                
-                <ul class="nav-menu">
-                    <li class="mobile-nav-prompt">Services</li>
-                    <li class="nav-prompt">Services</li>
-                    <li><a href="/services/strategy">Strategy</a></li>
-                    <li><a href="/services/clear-way-forward">Clear Way Forward</a></li>
-                    <li><a href="/services/market-traction">Market Traction</a></li>
-                    <li><a href="#contact" onclick="openContactForm()">Contact</a></li>
-                    <li class="nav-divider"></li>
-                    <li class="mobile-only">
-                        <a href="/careers/">
-                            <span class="material-symbols-outlined">person</span>
-                            Careers
-                        </a>
-                    </li>
-                    <li class="mobile-only">
-                        <a href="/portal/">
-                            <span class="material-symbols-outlined">login</span>
-                            Portal
-                        </a>
-                    </li>
-                </ul>
-
-                <div class="nav-spacer"></div>
-
-                <button class="mobile-menu-toggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
+                <div class="nav-left">
+                    <a href="/" class="nav-logo">
+                        <img src="/img/Logo_M5M_Dark_Web.png" alt="Mach Five Marketing">
+                    </a>
+                    <div class="nav-menu">
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">
+                                Services
+                                <span class="nav-link-arrow">▼</span>
+                            </a>
+                            <div class="nav-dropdown">
+                                <div class="dropdown-grid">
+                                    <div class="dropdown-column">
+                                        <h4>Services</h4>
+                                        <div class="dropdown-links">
+                                            <a href="/services/strategy" class="dropdown-link">Strategy</a>
+                                            <a href="/services/clear-way-forward" class="dropdown-link">Clear Way Forward</a>
+                                            <a href="/services/market-traction" class="dropdown-link">Market Traction</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">
+                                Technology
+                                <span class="nav-link-arrow">▼</span>
+                            </a>
+                            <div class="nav-dropdown">
+                                <div class="dropdown-grid">
+                                    <div class="dropdown-column">
+                                        <h4>Our Technology</h4>
+                                        <div class="dropdown-links">
+                                            <a href="/technology/mach-five-magnet" class="dropdown-link">Mach Five Magnet</a>
+                                            <a href="/technology/mach-five-portal" class="dropdown-link">Mach Five Portal</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="#" class="nav-link">
+                                Resources
+                                <span class="nav-link-arrow">▼</span>
+                            </a>
+                            <div class="nav-dropdown">
+                                <div class="dropdown-grid">
+                                    <div class="dropdown-column">
+                                        <h4>Learn & Connect</h4>
+                                        <div class="dropdown-links">
+                                            <a href="/knowledge-base/" class="dropdown-link">Knowledge Base</a>
+                                            <a href="/careers/" class="dropdown-link">Careers</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="nav-item">
+                            <a href="/contact/" class="nav-link">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <a href="/portal/" class="nav-cta">
+                        Portal
+                        <span class="material-symbols-outlined">login</span>
+                    </a>
+                    <button class="mobile-menu-button" id="mobileMenuButton">
+                        <div class="hamburger">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
             </div>
         </nav>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <div class="mobile-menu-content">
+                <div class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'services')">
+                        Services
+                        <span class="mobile-nav-arrow">▼</span>
+                    </a>
+                    <div class="mobile-dropdown" id="services-dropdown">
+                        <a href="/services/strategy" class="mobile-dropdown-link">Strategy</a>
+                        <a href="/services/clear-way-forward" class="mobile-dropdown-link">Clear Way Forward</a>
+                        <a href="/services/market-traction" class="mobile-dropdown-link">Market Traction</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'technology')">
+                        Technology
+                        <span class="mobile-nav-arrow">▼</span>
+                    </a>
+                    <div class="mobile-dropdown" id="technology-dropdown">
+                        <a href="/technology/mach-five-magnet" class="mobile-dropdown-link">Mach Five Magnet</a>
+                        <a href="/technology/mach-five-portal" class="mobile-dropdown-link">Mach Five Portal</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="#" class="mobile-nav-link" onclick="toggleMobileDropdown(event, 'resources')">
+                        Resources
+                        <span class="mobile-nav-arrow">▼</span>
+                    </a>
+                    <div class="mobile-dropdown" id="resources-dropdown">
+                        <a href="/knowledge-base/" class="mobile-dropdown-link">Knowledge Base</a>
+                        <a href="/careers/" class="mobile-dropdown-link">Careers</a>
+                    </div>
+                </div>
+                <div class="mobile-nav-item">
+                    <a href="/contact/" class="mobile-nav-link">Contact</a>
+                </div>
+            </div>
+            <div class="mobile-menu-footer">
+                <a href="/contact/" class="mobile-cta">Get Started</a>
+            </div>
+        </div>
+
+        <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        if (mobileMenuButton) {
+            mobileMenuButton.addEventListener('click', function() {
+                this.classList.toggle('active');
+                mobileMenu.classList.toggle('active');
+                document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+            });
+        }
+
+        // Mobile dropdown toggle
+        function toggleMobileDropdown(event, id) {
+            event.preventDefault();
+            const item = event.currentTarget.parentElement;
+            const dropdown = document.getElementById(id + '-dropdown');
+
+            // Toggle expanded class
+            item.classList.toggle('expanded');
+        }
+
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            if (mobileMenu && mobileMenu.classList.contains('active')) {
+                if (!mobileMenu.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+                    mobileMenuButton.classList.remove('active');
+                    mobileMenu.classList.remove('active');
+                    document.body.style.overflow = '';
+                }
+            }
+        });
+        </script>
     </header>
 
     <div class="menu-overlay"></div>
@@ -1187,7 +1725,9 @@
     <footer class="footer">
     <div class="footer-content">
         <div class="footer-brand">
-            <neodigm-widget style="width: 40%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+            <div class="neodigm-widget-container">
+                <neodigm-widget style="width: 100%;" data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="effect_two_word_rotate"></neodigm-widget>
+            </div>
             <p>We are a marketing strategy and technology team helping companies grow faster and market smarter through data-driven campaigns, automation, and performance optimization.</p>
             <p>Headquartered in Chicago. Supporting clients nationwide.</p>
             <a href="mailto:support@machfivemarketing.com" class="footer-contact">
@@ -1196,22 +1736,32 @@
             </a>
         </div>
 
-        <div class="footer-section">
-            <h4>Services</h4>
-            <ul>
-                <li><a href="/services/strategy">Strategy</a></li>
-                <li><a href="/services/clear-way-forward">Clear Way Forward</a></li>
-                <li><a href="/services/market-traction">Market Traction</a></li>
-            </ul>
-        </div>
+        <div class="footer-sections-wrapper">
+            <div class="footer-section">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/services/strategy">Strategy</a></li>
+                    <li><a href="/services/clear-way-forward">Clear Way Forward</a></li>
+                    <li><a href="/services/market-traction">Market Traction</a></li>
+                </ul>
+            </div>
 
-        <div class="footer-section">
-            <h4>Mach Five</h4>
-            <ul>
-                <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
-                <li><a href="https://www.machfivetech.com" target="_blank">Mach Five Tech</a></li>
-                <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
-            </ul>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="/knowledge-base">Knowledge Base</a></li>
+                    <li><a href="/careers">Careers</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Mach Five</h4>
+                <ul>
+                    <li><a href="https://www.machfivetech.com" target="_blank">Mach Five Tech</a></li>
+                    <li><a href="https://www.machfivegroup.com" target="_blank">Mach Five Group</a></li>
+                    <li><a href="https://www.machvive.com" target="_blank">MachVive</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 
@@ -1220,6 +1770,56 @@
         <p>© 2025 Mach Five Marketing • <a href="/privacy-policy">Privacy Policy</a></p>
     </div>
 </footer>
+
+<script>
+(function() {
+    function lockWidgetHeight() {
+        const container = document.querySelector('.footer-brand .neodigm-widget-container');
+        const widget = document.querySelector('.footer-brand .neodigm-widget-container neodigm-widget');
+
+        if (container && widget) {
+            // Force lock container and widget heights with inline styles (highest specificity)
+            container.style.height = '4rem';
+            container.style.minHeight = '4rem';
+            container.style.maxHeight = '4rem';
+            container.style.overflow = 'hidden';
+
+            widget.style.height = 'auto';
+            widget.style.maxHeight = '4rem';
+            widget.style.overflow = 'hidden';
+
+            // Lock all child elements
+            const allChildren = widget.querySelectorAll('*');
+            allChildren.forEach(el => {
+                el.style.height = 'auto';
+                el.style.lineHeight = '1';
+                el.style.margin = '0';
+                el.style.padding = '0';
+            });
+        }
+    }
+
+    // Run immediately
+    lockWidgetHeight();
+
+    // Run after DOM load
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', lockWidgetHeight);
+    }
+
+    // Run after a delay to catch late widget initialization
+    setTimeout(lockWidgetHeight, 100);
+    setTimeout(lockWidgetHeight, 500);
+    setTimeout(lockWidgetHeight, 1000);
+
+    // Watch for mutations and re-lock if needed
+    const observer = new MutationObserver(lockWidgetHeight);
+    const container = document.querySelector('.footer-brand .neodigm-widget-container');
+    if (container) {
+        observer.observe(container, { childList: true, subtree: true, attributes: true });
+    }
+})();
+</script>
 
     <neodigm-widget data-n55-widget-config="{conf:'', ampm:'',mobile:''}" data-n55-widget-id="contact_form_iframe_sfdc"></neodigm-widget>
 
