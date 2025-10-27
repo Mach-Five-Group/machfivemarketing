@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Settings - Mach Five Magnet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/demo/demo.css">
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <div class="demo-banner-content">
+            <div class="demo-banner-text">
+                <span class="material-symbols-outlined">info</span>
+                <span>You're viewing a demo of Mach Five Magnet</span>
+            </div>
+            <a href="/technology/mach-five-magnet/" class="demo-banner-link">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span>Return to Main Site</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="demo-container">
+        <!-- Sidebar Navigation -->
+        <aside class="demo-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <span class="material-symbols-outlined logo-icon">attractions</span>
+                    <span class="logo-text">Magnet</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="/demo/" class="nav-item">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/demo/magnets.html" class="nav-item">
+                    <span class="material-symbols-outlined">widgets</span>
+                    <span>Your Magnets</span>
+                </a>
+                <a href="/demo/templates.html" class="nav-item">
+                    <span class="material-symbols-outlined">content_copy</span>
+                    <span>Templates</span>
+                </a>
+                <a href="/demo/conversations.html" class="nav-item">
+                    <span class="material-symbols-outlined">forum</span>
+                    <span>Conversations</span>
+                </a>
+                <a href="/demo/ab-testing.html" class="nav-item">
+                    <span class="material-symbols-outlined">science</span>
+                    <span>A/B Testing</span>
+                </a>
+                <a href="/demo/settings.html" class="nav-item active">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="demo-badge">
+                    <span class="material-symbols-outlined">science</span>
+                    <span>Demo Mode</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="demo-main">
+            <!-- Top Bar -->
+            <header class="demo-topbar">
+                <h1 class="page-title">Settings</h1>
+
+                <div class="topbar-actions">
+                    <button class="notification-btn">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-menu">
+                        <div class="user-avatar">JD</div>
+                        <span class="user-name">Jane Doe</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Settings Content -->
+            <div class="demo-content">
+                <!-- Settings Sections -->
+                <div class="settings-grid">
+                    <!-- Account Settings -->
+                    <div class="settings-section">
+                        <div class="settings-section-header">
+                            <div class="settings-section-title">
+                                <span class="material-symbols-outlined">account_circle</span>
+                                <h2>Account</h2>
+                            </div>
+                            <p class="settings-section-description">Manage your account details and preferences</p>
+                        </div>
+                        <div class="settings-section-body">
+                            <div class="settings-field">
+                                <label class="settings-label">Company Name</label>
+                                <input type="text" class="settings-input" value="Acme Corporation" />
+                            </div>
+                            <div class="settings-field">
+                                <label class="settings-label">Email Address</label>
+                                <input type="email" class="settings-input" value="jane.doe@acme.com" />
+                            </div>
+                            <div class="settings-field">
+                                <label class="settings-label">Time Zone</label>
+                                <select class="settings-select">
+                                    <option>Eastern Time (ET)</option>
+                                    <option>Central Time (CT)</option>
+                                    <option>Mountain Time (MT)</option>
+                                    <option>Pacific Time (PT)</option>
+                                </select>
+                            </div>
+                            <button class="btn-save">Save Changes</button>
+                        </div>
+                    </div>
+
+                    <!-- Integrations -->
+                    <div class="settings-section">
+                        <div class="settings-section-header">
+                            <div class="settings-section-title">
+                                <span class="material-symbols-outlined">extension</span>
+                                <h2>Integrations</h2>
+                            </div>
+                            <p class="settings-section-description">Connect your tools and platforms</p>
+                        </div>
+                        <div class="settings-section-body">
+                            <!-- Integration Item 1 -->
+                            <div class="integration-item">
+                                <div class="integration-info">
+                                    <div class="integration-icon salesforce">SF</div>
+                                    <div class="integration-details">
+                                        <div class="integration-name">Salesforce</div>
+                                        <div class="integration-status connected">
+                                            <span class="status-dot"></span>
+                                            Connected
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-integration disconnect">Disconnect</button>
+                            </div>
+
+                            <!-- Integration Item 2 -->
+                            <div class="integration-item">
+                                <div class="integration-info">
+                                    <div class="integration-icon hubspot">HS</div>
+                                    <div class="integration-details">
+                                        <div class="integration-name">HubSpot</div>
+                                        <div class="integration-status connected">
+                                            <span class="status-dot"></span>
+                                            Connected
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-integration disconnect">Disconnect</button>
+                            </div>
+
+                            <!-- Integration Item 3 -->
+                            <div class="integration-item">
+                                <div class="integration-info">
+                                    <div class="integration-icon calendly">CA</div>
+                                    <div class="integration-details">
+                                        <div class="integration-name">Calendly</div>
+                                        <div class="integration-status">
+                                            Not connected
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-integration connect">Connect</button>
+                            </div>
+
+                            <!-- Integration Item 4 -->
+                            <div class="integration-item">
+                                <div class="integration-info">
+                                    <div class="integration-icon mailchimp">MC</div>
+                                    <div class="integration-details">
+                                        <div class="integration-name">Mailchimp</div>
+                                        <div class="integration-status">
+                                            Not connected
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-integration connect">Connect</button>
+                            </div>
+
+                            <!-- Integration Item 5 -->
+                            <div class="integration-item">
+                                <div class="integration-info">
+                                    <div class="integration-icon zapier">ZA</div>
+                                    <div class="integration-details">
+                                        <div class="integration-name">Zapier</div>
+                                        <div class="integration-status">
+                                            Not connected
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="btn-integration connect">Connect</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notifications -->
+                    <div class="settings-section">
+                        <div class="settings-section-header">
+                            <div class="settings-section-title">
+                                <span class="material-symbols-outlined">notifications</span>
+                                <h2>Notifications</h2>
+                            </div>
+                            <p class="settings-section-description">Control what updates you receive</p>
+                        </div>
+                        <div class="settings-section-body">
+                            <div class="notification-setting">
+                                <div class="notification-info">
+                                    <div class="notification-title">New Conversation</div>
+                                    <div class="notification-description">Get notified when someone starts a new conversation</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="notification-setting">
+                                <div class="notification-info">
+                                    <div class="notification-title">Completed Flow</div>
+                                    <div class="notification-description">Alert when a visitor completes a flow</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="notification-setting">
+                                <div class="notification-info">
+                                    <div class="notification-title">Weekly Reports</div>
+                                    <div class="notification-description">Receive weekly performance summaries</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+
+                            <div class="notification-setting">
+                                <div class="notification-info">
+                                    <div class="notification-title">Product Updates</div>
+                                    <div class="notification-description">Stay informed about new features and improvements</div>
+                                </div>
+                                <label class="toggle-switch">
+                                    <input type="checkbox" checked />
+                                    <span class="toggle-slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Billing -->
+                    <div class="settings-section">
+                        <div class="settings-section-header">
+                            <div class="settings-section-title">
+                                <span class="material-symbols-outlined">credit_card</span>
+                                <h2>Billing</h2>
+                            </div>
+                            <p class="settings-section-description">Manage your subscription and payment</p>
+                        </div>
+                        <div class="settings-section-body">
+                            <div class="plan-info">
+                                <div class="plan-badge">Professional Plan</div>
+                                <div class="plan-price">$99<span class="plan-period">/month</span></div>
+                                <div class="plan-renewal">Renews on February 1, 2025</div>
+                            </div>
+
+                            <div class="billing-actions">
+                                <button class="btn-billing-action">
+                                    <span class="material-symbols-outlined">upgrade</span>
+                                    Upgrade Plan
+                                </button>
+                                <button class="btn-billing-action secondary">
+                                    <span class="material-symbols-outlined">payment</span>
+                                    Update Payment Method
+                                </button>
+                                <button class="btn-billing-action secondary">
+                                    <span class="material-symbols-outlined">receipt</span>
+                                    View Invoices
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Team Collaboration -->
+                    <div class="settings-section">
+                        <div class="settings-section-header">
+                            <div class="settings-section-title">
+                                <span class="material-symbols-outlined">group</span>
+                                <h2>Team</h2>
+                            </div>
+                            <p class="settings-section-description">Manage team members and permissions</p>
+                        </div>
+                        <div class="settings-section-body">
+                            <div class="team-header">
+                                <button class="btn-primary btn-sm invite-member-btn">
+                                    <span class="material-symbols-outlined">person_add</span>
+                                    <span>Invite Team Member</span>
+                                </button>
+                            </div>
+
+                            <!-- Team Members List -->
+                            <div class="team-members">
+                                <!-- Member 1 - Owner -->
+                                <div class="team-member">
+                                    <div class="member-avatar" style="background: linear-gradient(135deg, #3498DB, #2980B9);">JD</div>
+                                    <div class="member-info">
+                                        <div class="member-name">Jane Doe <span class="member-you">(You)</span></div>
+                                        <div class="member-email">jane.doe@acme.com</div>
+                                    </div>
+                                    <div class="member-role">
+                                        <span class="role-badge owner">Owner</span>
+                                    </div>
+                                    <div class="member-actions">
+                                        <span class="member-joined">Joined Jan 2024</span>
+                                    </div>
+                                </div>
+
+                                <!-- Member 2 - Admin -->
+                                <div class="team-member">
+                                    <div class="member-avatar" style="background: linear-gradient(135deg, #FF6B35, #E85A2A);">MS</div>
+                                    <div class="member-info">
+                                        <div class="member-name">Michael Smith</div>
+                                        <div class="member-email">m.smith@acme.com</div>
+                                    </div>
+                                    <div class="member-role">
+                                        <select class="role-select">
+                                            <option value="admin" selected>Admin</option>
+                                            <option value="editor">Editor</option>
+                                            <option value="viewer">Viewer</option>
+                                        </select>
+                                    </div>
+                                    <div class="member-actions">
+                                        <button class="icon-btn-small remove-member" title="Remove member">
+                                            <span class="material-symbols-outlined">person_remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Member 3 - Editor -->
+                                <div class="team-member">
+                                    <div class="member-avatar" style="background: linear-gradient(135deg, #27AE60, #229954);">SR</div>
+                                    <div class="member-info">
+                                        <div class="member-name">Sarah Rodriguez</div>
+                                        <div class="member-email">s.rodriguez@acme.com</div>
+                                    </div>
+                                    <div class="member-role">
+                                        <select class="role-select">
+                                            <option value="admin">Admin</option>
+                                            <option value="editor" selected>Editor</option>
+                                            <option value="viewer">Viewer</option>
+                                        </select>
+                                    </div>
+                                    <div class="member-actions">
+                                        <button class="icon-btn-small remove-member" title="Remove member">
+                                            <span class="material-symbols-outlined">person_remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Member 4 - Viewer -->
+                                <div class="team-member">
+                                    <div class="member-avatar" style="background: linear-gradient(135deg, #9B59B6, #8E44AD);">DK</div>
+                                    <div class="member-info">
+                                        <div class="member-name">David Kim</div>
+                                        <div class="member-email">d.kim@acme.com</div>
+                                    </div>
+                                    <div class="member-role">
+                                        <select class="role-select">
+                                            <option value="admin">Admin</option>
+                                            <option value="editor">Editor</option>
+                                            <option value="viewer" selected>Viewer</option>
+                                        </select>
+                                    </div>
+                                    <div class="member-actions">
+                                        <button class="icon-btn-small remove-member" title="Remove member">
+                                            <span class="material-symbols-outlined">person_remove</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Role Permissions Info -->
+                            <div class="role-permissions">
+                                <div class="role-permissions-title">
+                                    <span class="material-symbols-outlined">info</span>
+                                    Role Permissions
+                                </div>
+                                <div class="role-permissions-grid">
+                                    <div class="role-permission-item">
+                                        <strong>Owner</strong> - Full access including billing and team management
+                                    </div>
+                                    <div class="role-permission-item">
+                                        <strong>Admin</strong> - Create, edit, and delete magnets; manage integrations
+                                    </div>
+                                    <div class="role-permission-item">
+                                        <strong>Editor</strong> - Create and edit magnets; view analytics
+                                    </div>
+                                    <div class="role-permission-item">
+                                        <strong>Viewer</strong> - View-only access to magnets and analytics
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Team Activity Log -->
+                            <div class="team-activity-section">
+                                <h3 class="team-activity-title">Recent Activity</h3>
+                                <div class="team-activity-log">
+                                    <div class="activity-log-item">
+                                        <div class="activity-log-avatar" style="background: linear-gradient(135deg, #27AE60, #229954);">SR</div>
+                                        <div class="activity-log-content">
+                                            <div class="activity-log-text">
+                                                <strong>Sarah Rodriguez</strong> edited <span class="activity-highlight">Homepage Demo Flow</span>
+                                            </div>
+                                            <div class="activity-log-time">2 hours ago</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity-log-item">
+                                        <div class="activity-log-avatar" style="background: linear-gradient(135deg, #FF6B35, #E85A2A);">MS</div>
+                                        <div class="activity-log-content">
+                                            <div class="activity-log-text">
+                                                <strong>Michael Smith</strong> created <span class="activity-highlight">Product Quiz Magnet</span>
+                                            </div>
+                                            <div class="activity-log-time">5 hours ago</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity-log-item">
+                                        <div class="activity-log-avatar" style="background: linear-gradient(135deg, #3498DB, #2980B9);">JD</div>
+                                        <div class="activity-log-content">
+                                            <div class="activity-log-text">
+                                                <strong>Jane Doe</strong> connected <span class="activity-highlight">Salesforce integration</span>
+                                            </div>
+                                            <div class="activity-log-time">1 day ago</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity-log-item">
+                                        <div class="activity-log-avatar" style="background: linear-gradient(135deg, #27AE60, #229954);">SR</div>
+                                        <div class="activity-log-content">
+                                            <div class="activity-log-text">
+                                                <strong>Sarah Rodriguez</strong> updated <span class="activity-highlight">Blog Newsletter settings</span>
+                                            </div>
+                                            <div class="activity-log-time">2 days ago</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="activity-log-item">
+                                        <div class="activity-log-avatar" style="background: linear-gradient(135deg, #FF6B35, #E85A2A);">MS</div>
+                                        <div class="activity-log-content">
+                                            <div class="activity-log-text">
+                                                <strong>Michael Smith</strong> archived <span class="activity-highlight">Old Exit Intent Flow</span>
+                                            </div>
+                                            <div class="activity-log-time">3 days ago</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Danger Zone -->
+                    <div class="settings-section danger">
+                        <div class="settings-section-header">
+                            <div class="settings-section-title">
+                                <span class="material-symbols-outlined">warning</span>
+                                <h2>Danger Zone</h2>
+                            </div>
+                            <p class="settings-section-description">Irreversible and destructive actions</p>
+                        </div>
+                        <div class="settings-section-body">
+                            <div class="danger-action">
+                                <div class="danger-action-info">
+                                    <div class="danger-action-title">Export All Data</div>
+                                    <div class="danger-action-description">Download a complete archive of your account data</div>
+                                </div>
+                                <button class="btn-danger-action">Export Data</button>
+                            </div>
+
+                            <div class="danger-action">
+                                <div class="danger-action-info">
+                                    <div class="danger-action-title">Delete Account</div>
+                                    <div class="danger-action-description">Permanently delete your account and all associated data</div>
+                                </div>
+                                <button class="btn-danger-action destructive">Delete Account</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/demo/demo.js"></script>
+</body>
+</html>

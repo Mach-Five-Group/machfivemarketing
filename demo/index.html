@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Dashboard - Mach Five Magnet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/demo/demo.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <div class="demo-banner-content">
+            <div class="demo-banner-text">
+                <span class="material-symbols-outlined">info</span>
+                <span>You're viewing a demo of Mach Five Magnet</span>
+            </div>
+            <a href="/technology/mach-five-magnet/" class="demo-banner-link">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span>Return to Main Site</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="demo-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="material-symbols-outlined logo-icon">attractions</span>
+                <span class="logo-text">Magnet</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="/demo/" class="nav-item active">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="/demo/magnets.html" class="nav-item">
+                <span class="material-symbols-outlined">widgets</span>
+                <span>Your Magnets</span>
+            </a>
+            <a href="/demo/templates.html" class="nav-item">
+                <span class="material-symbols-outlined">content_copy</span>
+                <span>Templates</span>
+            </a>
+            <a href="/demo/conversations.html" class="nav-item">
+                <span class="material-symbols-outlined">forum</span>
+                <span>Conversations</span>
+            </a>
+            <a href="/demo/ab-testing.html" class="nav-item">
+                <span class="material-symbols-outlined">science</span>
+                <span>A/B Testing</span>
+            </a>
+            <a href="/demo/settings.html" class="nav-item">
+                <span class="material-symbols-outlined">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="demo-badge">
+                <span class="material-symbols-outlined">science</span>
+                <span>Demo Mode</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="demo-main">
+        <!-- Top Bar -->
+        <header class="demo-topbar">
+            <h1 class="page-title">Dashboard</h1>
+
+            <div class="topbar-actions">
+                <button class="notification-btn">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-menu">
+                    <div class="user-avatar">JD</div>
+                    <span class="user-name">Jane Doe</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Content -->
+        <div class="demo-content">
+            <!-- Stats Cards -->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="material-symbols-outlined stat-icon">forum</span>
+                        <span class="stat-label">Conversations Started</span>
+                    </div>
+                    <div class="stat-value">342</div>
+                    <div class="stat-change positive">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        <span>24 started today</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="material-symbols-outlined stat-icon">check_circle</span>
+                        <span class="stat-label">Flow Completion Rate</span>
+                    </div>
+                    <div class="stat-value">68%</div>
+                    <div class="stat-change positive">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        <span>5% from last week</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="material-symbols-outlined stat-icon">person_add</span>
+                        <span class="stat-label">Leads Captured</span>
+                    </div>
+                    <div class="stat-value">156</div>
+                    <div class="stat-change positive">
+                        <span class="material-symbols-outlined">trending_up</span>
+                        <span>12% from yesterday</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-header">
+                        <span class="material-symbols-outlined stat-icon">widgets</span>
+                        <span class="stat-label">Active Magnets</span>
+                    </div>
+                    <div class="stat-value">12</div>
+                    <div class="stat-change">
+                        <span class="stat-sublabel">Across 3 domains</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analytics Charts -->
+            <div class="charts-section">
+                <!-- Trend Chart -->
+                <div class="dashboard-card chart-card-wide">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="material-symbols-outlined">show_chart</span>
+                            Conversation Trends
+                        </h2>
+                        <div class="chart-controls">
+                            <button class="chart-period-btn active" data-period="7">7 Days</button>
+                            <button class="chart-period-btn" data-period="30">30 Days</button>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <canvas id="trendChart"></canvas>
+                    </div>
+                </div>
+
+                <!-- Smaller Charts Grid -->
+                <div class="charts-grid">
+                    <!-- Funnel Chart -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <span class="material-symbols-outlined">filter_alt</span>
+                                Completion Funnel
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="funnelChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Traffic Sources -->
+                    <div class="dashboard-card">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <span class="material-symbols-outlined">source</span>
+                                Traffic Sources
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="sourceChart"></canvas>
+                        </div>
+                    </div>
+
+                    <!-- Magnet Performance -->
+                    <div class="dashboard-card chart-card-full">
+                        <div class="card-header">
+                            <h2 class="card-title">
+                                <span class="material-symbols-outlined">bar_chart</span>
+                                Magnet Performance
+                            </h2>
+                        </div>
+                        <div class="card-body">
+                            <canvas id="magnetChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Live Activity Feed & Recent Leads -->
+            <div class="content-grid">
+                <!-- Recent Interactions -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="material-symbols-outlined">bolt</span>
+                            Recent Interactions
+                        </h2>
+                        <span class="live-indicator">
+                            <span class="pulse-dot"></span>
+                            Live
+                        </span>
+                    </div>
+                    <div class="card-body">
+                        <div class="activity-feed">
+                            <div class="activity-item">
+                                <div class="activity-icon conversion">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Flow completed</div>
+                                    <div class="activity-meta">Sarah Johnson • Homepage Demo Scheduler → Booked • 2 min ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon new-lead">
+                                    <span class="material-symbols-outlined">forum</span>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Conversation started</div>
+                                    <div class="activity-meta">Michael Chen • Blog Newsletter Capture • 5 min ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon conversion">
+                                    <span class="material-symbols-outlined">person_add</span>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Lead captured</div>
+                                    <div class="activity-meta">Emily Rodriguez • Pricing Exit Intent → Email • 12 min ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon engagement">
+                                    <span class="material-symbols-outlined">close</span>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Flow abandoned</div>
+                                    <div class="activity-meta">David Park • Homepage Demo • Step 2/5 • 18 min ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon conversion">
+                                    <span class="material-symbols-outlined">check_circle</span>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Flow completed</div>
+                                    <div class="activity-meta">Lisa Thompson • Product Finder Quiz → Qualified • 24 min ago</div>
+                                </div>
+                            </div>
+
+                            <div class="activity-item">
+                                <div class="activity-icon new-lead">
+                                    <span class="material-symbols-outlined">forum</span>
+                                </div>
+                                <div class="activity-content">
+                                    <div class="activity-title">Conversation started</div>
+                                    <div class="activity-meta">James Wilson • Blog Newsletter Capture • 31 min ago</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Leads -->
+                <div class="dashboard-card">
+                    <div class="card-header">
+                        <h2 class="card-title">
+                            <span class="material-symbols-outlined">group</span>
+                            Recent Leads
+                        </h2>
+                        <a href="/demo/leads.html" class="view-all-link">View All →</a>
+                    </div>
+                    <div class="card-body">
+                        <div class="leads-table">
+                            <div class="table-row header">
+                                <div class="table-cell">Name</div>
+                                <div class="table-cell">Company</div>
+                                <div class="table-cell">Score</div>
+                                <div class="table-cell">Status</div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <div class="lead-name">Sarah Johnson</div>
+                                    <div class="lead-email">sarah.j@techcorp.com</div>
+                                </div>
+                                <div class="table-cell">Tech Corp</div>
+                                <div class="table-cell">
+                                    <span class="score-badge hot">92</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="status-badge new">New</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <div class="lead-name">Michael Chen</div>
+                                    <div class="lead-email">m.chen@innovate.io</div>
+                                </div>
+                                <div class="table-cell">Innovate Inc</div>
+                                <div class="table-cell">
+                                    <span class="score-badge warm">78</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="status-badge engaged">Engaged</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <div class="lead-name">Emily Rodriguez</div>
+                                    <div class="lead-email">emily@growthlab.com</div>
+                                </div>
+                                <div class="table-cell">Growth Lab</div>
+                                <div class="table-cell">
+                                    <span class="score-badge hot">85</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="status-badge converted">Converted</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <div class="lead-name">David Park</div>
+                                    <div class="lead-email">david@ventures.co</div>
+                                </div>
+                                <div class="table-cell">Park Ventures</div>
+                                <div class="table-cell">
+                                    <span class="score-badge warm">72</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="status-badge engaged">Engaged</span>
+                                </div>
+                            </div>
+
+                            <div class="table-row">
+                                <div class="table-cell">
+                                    <div class="lead-name">Lisa Thompson</div>
+                                    <div class="lead-email">l.thompson@global.com</div>
+                                </div>
+                                <div class="table-cell">Global Systems</div>
+                                <div class="table-cell">
+                                    <span class="score-badge cold">45</span>
+                                </div>
+                                <div class="table-cell">
+                                    <span class="status-badge new">New</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/demo/demo.js"></script>
+    <script src="/demo/activity-feed.js"></script>
+    <script src="/demo/analytics-charts.js"></script>
+    <script src="/demo/onboarding-tour.js"></script>
+</body>
+</html>

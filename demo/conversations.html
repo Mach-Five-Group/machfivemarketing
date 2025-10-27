@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>Conversations - Mach Five Magnet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/demo/demo.css">
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <div class="demo-banner-content">
+            <div class="demo-banner-text">
+                <span class="material-symbols-outlined">info</span>
+                <span>You're viewing a demo of Mach Five Magnet</span>
+            </div>
+            <a href="/technology/mach-five-magnet/" class="demo-banner-link">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span>Return to Main Site</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="demo-container">
+        <!-- Sidebar Navigation -->
+        <aside class="demo-sidebar">
+            <div class="sidebar-header">
+                <div class="sidebar-logo">
+                    <span class="material-symbols-outlined logo-icon">attractions</span>
+                    <span class="logo-text">Magnet</span>
+                </div>
+            </div>
+
+            <nav class="sidebar-nav">
+                <a href="/demo/" class="nav-item">
+                    <span class="material-symbols-outlined">dashboard</span>
+                    <span>Dashboard</span>
+                </a>
+                <a href="/demo/magnets.html" class="nav-item">
+                    <span class="material-symbols-outlined">widgets</span>
+                    <span>Your Magnets</span>
+                </a>
+                <a href="/demo/templates.html" class="nav-item">
+                    <span class="material-symbols-outlined">content_copy</span>
+                    <span>Templates</span>
+                </a>
+                <a href="/demo/conversations.html" class="nav-item active">
+                    <span class="material-symbols-outlined">forum</span>
+                    <span>Conversations</span>
+                </a>
+                <a href="/demo/ab-testing.html" class="nav-item">
+                    <span class="material-symbols-outlined">science</span>
+                    <span>A/B Testing</span>
+                </a>
+                <a href="/demo/settings.html" class="nav-item">
+                    <span class="material-symbols-outlined">settings</span>
+                    <span>Settings</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="demo-badge">
+                    <span class="material-symbols-outlined">science</span>
+                    <span>Demo Mode</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="demo-main">
+            <!-- Top Bar -->
+            <header class="demo-topbar">
+                <h1 class="page-title">Conversations</h1>
+
+                <div class="topbar-actions">
+                    <button class="notification-btn">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <span class="notification-badge">3</span>
+                    </button>
+                    <div class="user-menu">
+                        <div class="user-avatar">JD</div>
+                        <span class="user-name">Jane Doe</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Conversations Content -->
+            <div class="demo-content">
+                <!-- Filters Bar -->
+                <div class="filters-bar">
+                    <div class="filter-group">
+                        <label class="filter-label">Magnet</label>
+                        <select class="filter-select">
+                            <option>All Magnets</option>
+                            <option>Homepage Demo Scheduler</option>
+                            <option>Blog Newsletter Capture</option>
+                            <option>Pricing Exit Intent</option>
+                            <option>Product Finder Quiz</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Status</label>
+                        <select class="filter-select">
+                            <option>All Statuses</option>
+                            <option>Completed</option>
+                            <option>Abandoned</option>
+                            <option>In Progress</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label class="filter-label">Time Period</label>
+                        <select class="filter-select">
+                            <option>Last 7 Days</option>
+                            <option>Last 30 Days</option>
+                            <option>Last 90 Days</option>
+                            <option>All Time</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <div class="search-box">
+                            <span class="material-symbols-outlined">search</span>
+                            <input type="text" placeholder="Search conversations..." />
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Conversations Table -->
+                <div class="conversations-table-container">
+                    <table class="conversations-table">
+                        <thead>
+                            <tr>
+                                <th>Visitor</th>
+                                <th>Magnet</th>
+                                <th>Status</th>
+                                <th>Progress</th>
+                                <th>Started</th>
+                                <th>Duration</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Conversation Row 1 -->
+                            <tr class="conversation-row" data-conversation-id="1">
+                                <td>
+                                    <div class="visitor-info">
+                                        <div class="visitor-avatar">SJ</div>
+                                        <div class="visitor-details">
+                                            <div class="visitor-name">Sarah Johnson</div>
+                                            <div class="visitor-email">sarah.j@example.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="magnet-name-cell">Homepage Demo Scheduler</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge completed">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-info">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 100%"></div>
+                                        </div>
+                                        <span class="progress-text">5/5 steps</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="time-info">
+                                        <div class="time-primary">2 minutes ago</div>
+                                        <div class="time-secondary">Jan 20, 2:43 PM</div>
+                                    </div>
+                                </td>
+                                <td>1m 34s</td>
+                                <td>
+                                    <button class="btn-view-conversation" onclick="viewConversation(1)">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Conversation Row 2 -->
+                            <tr class="conversation-row" data-conversation-id="2">
+                                <td>
+                                    <div class="visitor-info">
+                                        <div class="visitor-avatar">AM</div>
+                                        <div class="visitor-details">
+                                            <div class="visitor-name">Alex Martinez</div>
+                                            <div class="visitor-email">alex.m@company.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="magnet-name-cell">Blog Newsletter Capture</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge completed">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-info">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 100%"></div>
+                                        </div>
+                                        <span class="progress-text">3/3 steps</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="time-info">
+                                        <div class="time-primary">12 minutes ago</div>
+                                        <div class="time-secondary">Jan 20, 2:31 PM</div>
+                                    </div>
+                                </td>
+                                <td>42s</td>
+                                <td>
+                                    <button class="btn-view-conversation" onclick="viewConversation(2)">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Conversation Row 3 -->
+                            <tr class="conversation-row" data-conversation-id="3">
+                                <td>
+                                    <div class="visitor-info">
+                                        <div class="visitor-avatar">RG</div>
+                                        <div class="visitor-details">
+                                            <div class="visitor-name">Rachel Green</div>
+                                            <div class="visitor-email">Unknown</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="magnet-name-cell">Pricing Exit Intent</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge abandoned">
+                                        <span class="material-symbols-outlined">cancel</span>
+                                        Abandoned
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-info">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill abandoned" style="width: 33%"></div>
+                                        </div>
+                                        <span class="progress-text">1/3 steps</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="time-info">
+                                        <div class="time-primary">28 minutes ago</div>
+                                        <div class="time-secondary">Jan 20, 2:15 PM</div>
+                                    </div>
+                                </td>
+                                <td>8s</td>
+                                <td>
+                                    <button class="btn-view-conversation" onclick="viewConversation(3)">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Conversation Row 4 -->
+                            <tr class="conversation-row" data-conversation-id="4">
+                                <td>
+                                    <div class="visitor-info">
+                                        <div class="visitor-avatar">TA</div>
+                                        <div class="visitor-details">
+                                            <div class="visitor-name">Tom Anderson</div>
+                                            <div class="visitor-email">t.anderson@mail.com</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="magnet-name-cell">Product Finder Quiz</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge completed">
+                                        <span class="material-symbols-outlined">check_circle</span>
+                                        Completed
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-info">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill" style="width: 100%"></div>
+                                        </div>
+                                        <span class="progress-text">6/6 steps</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="time-info">
+                                        <div class="time-primary">1 hour ago</div>
+                                        <div class="time-secondary">Jan 20, 1:42 PM</div>
+                                    </div>
+                                </td>
+                                <td>2m 18s</td>
+                                <td>
+                                    <button class="btn-view-conversation" onclick="viewConversation(4)">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+
+                            <!-- Conversation Row 5 -->
+                            <tr class="conversation-row" data-conversation-id="5">
+                                <td>
+                                    <div class="visitor-info">
+                                        <div class="visitor-avatar">NB</div>
+                                        <div class="visitor-details">
+                                            <div class="visitor-name">Nicole Brown</div>
+                                            <div class="visitor-email">Unknown</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="magnet-name-cell">Homepage Demo Scheduler</div>
+                                </td>
+                                <td>
+                                    <span class="status-badge abandoned">
+                                        <span class="material-symbols-outlined">cancel</span>
+                                        Abandoned
+                                    </span>
+                                </td>
+                                <td>
+                                    <div class="progress-info">
+                                        <div class="progress-bar">
+                                            <div class="progress-fill abandoned" style="width: 60%"></div>
+                                        </div>
+                                        <span class="progress-text">3/5 steps</span>
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="time-info">
+                                        <div class="time-primary">2 hours ago</div>
+                                        <div class="time-secondary">Jan 20, 12:38 PM</div>
+                                    </div>
+                                </td>
+                                <td>1m 02s</td>
+                                <td>
+                                    <button class="btn-view-conversation" onclick="viewConversation(5)">
+                                        <span class="material-symbols-outlined">visibility</span>
+                                        View
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Pagination -->
+                <div class="pagination">
+                    <button class="pagination-btn" disabled>
+                        <span class="material-symbols-outlined">chevron_left</span>
+                        Previous
+                    </button>
+                    <div class="pagination-info">Showing 1-5 of 342 conversations</div>
+                    <button class="pagination-btn">
+                        Next
+                        <span class="material-symbols-outlined">chevron_right</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/demo/demo.js"></script>
+    <script>
+        function viewConversation(id) {
+            alert('Conversation transcript viewer would open here for conversation #' + id);
+        }
+    </script>
+</body>
+</html>

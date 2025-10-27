@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>A/B Testing - Mach Five Magnet</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&family=Roboto+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="/demo/demo.css">
+</head>
+<body>
+    <!-- Demo Banner -->
+    <div class="demo-banner">
+        <div class="demo-banner-content">
+            <div class="demo-banner-text">
+                <span class="material-symbols-outlined">info</span>
+                <span>You're viewing a demo of Mach Five Magnet</span>
+            </div>
+            <a href="/technology/mach-five-magnet/" class="demo-banner-link">
+                <span class="material-symbols-outlined">arrow_back</span>
+                <span>Return to Main Site</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <aside class="demo-sidebar">
+        <div class="sidebar-header">
+            <div class="sidebar-logo">
+                <span class="material-symbols-outlined logo-icon">attractions</span>
+                <span class="logo-text">Magnet</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="/demo/" class="nav-item">
+                <span class="material-symbols-outlined">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="/demo/magnets.html" class="nav-item">
+                <span class="material-symbols-outlined">widgets</span>
+                <span>Your Magnets</span>
+            </a>
+            <a href="/demo/templates.html" class="nav-item">
+                <span class="material-symbols-outlined">content_copy</span>
+                <span>Templates</span>
+            </a>
+            <a href="/demo/conversations.html" class="nav-item">
+                <span class="material-symbols-outlined">forum</span>
+                <span>Conversations</span>
+            </a>
+            <a href="/demo/ab-testing.html" class="nav-item active">
+                <span class="material-symbols-outlined">science</span>
+                <span>A/B Testing</span>
+            </a>
+            <a href="/demo/settings.html" class="nav-item">
+                <span class="material-symbols-outlined">settings</span>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="demo-badge">
+                <span class="material-symbols-outlined">science</span>
+                <span>Demo Mode</span>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="demo-main">
+        <!-- Top Bar -->
+        <header class="demo-topbar">
+            <h1 class="page-title">A/B Testing</h1>
+
+            <div class="topbar-actions">
+                <button class="notification-btn">
+                    <span class="material-symbols-outlined">notifications</span>
+                    <span class="notification-badge">3</span>
+                </button>
+                <div class="user-menu">
+                    <div class="user-avatar">JD</div>
+                    <span class="user-name">Jane Doe</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- A/B Testing Content -->
+        <div class="demo-content">
+            <!-- Page Header -->
+            <div class="page-header">
+                <div class="page-header-text">
+                    <p class="page-description">Compare flow variants to optimize conversion rates</p>
+                </div>
+                <button class="btn-primary">
+                    <span class="material-symbols-outlined">add</span>
+                    <span>Create New Test</span>
+                </button>
+            </div>
+
+            <!-- Active Test -->
+            <div class="ab-test-card active-test">
+                <div class="ab-test-header">
+                    <div class="ab-test-title-section">
+                        <h2 class="ab-test-name">Homepage Demo Scheduler - CTA Test</h2>
+                        <span class="ab-test-status running">
+                            <span class="pulse-dot"></span>
+                            Running
+                        </span>
+                    </div>
+                    <div class="ab-test-actions">
+                        <button class="btn-secondary btn-sm">View Details</button>
+                        <button class="btn-primary btn-sm winner-btn">Declare Winner</button>
+                    </div>
+                </div>
+
+                <div class="ab-test-info">
+                    <div class="ab-test-meta">
+                        <div class="meta-item">
+                            <span class="material-symbols-outlined">schedule</span>
+                            <span>Started 12 days ago</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="material-symbols-outlined">visibility</span>
+                            <span>4,218 total visitors</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="material-symbols-outlined">swap_horiz</span>
+                            <span>50/50 traffic split</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Variants Comparison -->
+                <div class="variants-comparison">
+                    <!-- Variant A -->
+                    <div class="variant-card">
+                        <div class="variant-header">
+                            <h3 class="variant-name">Variant A (Control)</h3>
+                            <span class="variant-label control">Control</span>
+                        </div>
+                        <div class="variant-description">
+                            "Book a Demo" CTA button - Blue color
+                        </div>
+                        <div class="variant-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">Visitors</span>
+                                <span class="metric-value">2,109</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Completions</span>
+                                <span class="metric-value">89</span>
+                            </div>
+                            <div class="metric-row highlight">
+                                <span class="metric-label">Conversion Rate</span>
+                                <span class="metric-value large">4.2%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Avg. Time</span>
+                                <span class="metric-value">2m 14s</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- VS Divider -->
+                    <div class="vs-divider">
+                        <div class="vs-circle">VS</div>
+                    </div>
+
+                    <!-- Variant B -->
+                    <div class="variant-card winner">
+                        <div class="variant-header">
+                            <h3 class="variant-name">Variant B</h3>
+                            <span class="variant-label winning">Leading</span>
+                        </div>
+                        <div class="variant-description">
+                            "Schedule Your Demo" CTA button - Orange color
+                        </div>
+                        <div class="variant-metrics">
+                            <div class="metric-row">
+                                <span class="metric-label">Visitors</span>
+                                <span class="metric-value">2,109</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Completions</span>
+                                <span class="metric-value">122</span>
+                            </div>
+                            <div class="metric-row highlight">
+                                <span class="metric-label">Conversion Rate</span>
+                                <span class="metric-value large">5.8%</span>
+                                <span class="improvement">+1.6%</span>
+                            </div>
+                            <div class="metric-row">
+                                <span class="metric-label">Avg. Time</span>
+                                <span class="metric-value">2m 08s</span>
+                            </div>
+                        </div>
+                        <div class="winner-badge">
+                            <span class="material-symbols-outlined">emoji_events</span>
+                            <span>38% Better</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Statistical Significance -->
+                <div class="statistical-significance">
+                    <div class="significance-bar">
+                        <div class="significance-fill" style="width: 96%"></div>
+                    </div>
+                    <div class="significance-text">
+                        <span class="material-symbols-outlined">check_circle</span>
+                        <strong>96% Statistical Confidence</strong> - Results are statistically significant
+                    </div>
+                </div>
+            </div>
+
+            <!-- Completed Tests -->
+            <div class="section-header">
+                <h2 class="section-title">Completed Tests</h2>
+            </div>
+
+            <div class="completed-tests">
+                <!-- Completed Test 1 -->
+                <div class="ab-test-card completed-test">
+                    <div class="ab-test-header">
+                        <div class="ab-test-title-section">
+                            <h3 class="ab-test-name">Blog Newsletter - Headline Test</h3>
+                            <span class="ab-test-status completed">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                Completed
+                            </span>
+                        </div>
+                        <button class="btn-text">View Report →</button>
+                    </div>
+                    <div class="completed-test-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Winner:</span>
+                            <span class="summary-value">Variant B</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Improvement:</span>
+                            <span class="summary-value positive">+24%</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Duration:</span>
+                            <span class="summary-value">18 days</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Total Visitors:</span>
+                            <span class="summary-value">8,432</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Completed Test 2 -->
+                <div class="ab-test-card completed-test">
+                    <div class="ab-test-header">
+                        <div class="ab-test-title-section">
+                            <h3 class="ab-test-name">Pricing Exit Intent - Offer Test</h3>
+                            <span class="ab-test-status completed">
+                                <span class="material-symbols-outlined">check_circle</span>
+                                Completed
+                            </span>
+                        </div>
+                        <button class="btn-text">View Report →</button>
+                    </div>
+                    <div class="completed-test-summary">
+                        <div class="summary-item">
+                            <span class="summary-label">Winner:</span>
+                            <span class="summary-value">Variant A</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Improvement:</span>
+                            <span class="summary-value positive">+12%</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Duration:</span>
+                            <span class="summary-value">14 days</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="summary-label">Total Visitors:</span>
+                            <span class="summary-value">3,286</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/demo/demo.js"></script>
+</body>
+</html>
