@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Disallow: /demo/
+Disallow: /ogindex.html
+Disallow: /layouts/
+
+Sitemap: https://www.machfivemarketing.com/sitemap.xml
