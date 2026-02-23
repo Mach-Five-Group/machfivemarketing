@@ -26,7 +26,7 @@
 }
 
 body {
-    font-family: 'Roboto', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: 'Helvetica', 'Helvetica Neue', 'Roboto', 'Roboto Condensed', sans-serif;
     background: var(--m5-bg);
     color: var(--m5-text);
     display: flex;
@@ -121,7 +121,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Google Sans Flex', 'Roboto Condensed', sans-serif;
     font-size: 24px;
     font-weight: 700;
 }
@@ -215,7 +215,7 @@ body {
 }
 
 .page-title {
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Google Sans Flex', 'Roboto Condensed', sans-serif;
     font-size: 28px;
     font-weight: 600;
     color: var(--m5-dark);
@@ -347,7 +347,7 @@ body {
 .stat-value {
     font-size: 36px;
     font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Google Sans Flex', 'Roboto Condensed', sans-serif;
     color: var(--m5-dark);
     margin-bottom: 8px;
     line-height: 1;
@@ -1007,7 +1007,7 @@ body {
 .magnet-stat .stat-number {
     font-size: 24px;
     font-weight: 700;
-    font-family: 'Roboto Condensed', sans-serif;
+    font-family: 'Google Sans Flex', 'Roboto Condensed', sans-serif;
     color: var(--m5-dark);
     line-height: 1;
     margin-bottom: 6px;
